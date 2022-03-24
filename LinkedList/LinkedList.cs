@@ -47,5 +47,31 @@ namespace LinkedList
                 Head = node;
             }
         }
+        public void AppendNode(int data)
+        {
+            Node node = new Node(data);
+            if(Head == null)
+            {
+                Head = Tail = node;
+            }
+            else
+            {
+                Tail.next = node;
+                Tail = node;
+            }
+        }
+        public bool search(int data)
+        {
+            Node temp = this.Head;
+            while (temp != null)
+            {
+                if(temp.data == data)
+                {
+                    return true;
+                }
+                temp = temp.next;
+            }
+            return false;
+        }
     }
 }
