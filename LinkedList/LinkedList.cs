@@ -60,6 +60,19 @@ namespace LinkedList
                 Tail = node;
             }
         }
+        public void AddNodeAtStart(int First)
+        {
+            Node node = new Node(First);
+            if(Head == null)
+            {
+                Head = Tail = node;
+            }
+            else
+            {
+                node.next = Head;
+                Head = node;
+            }
+        }
         public bool search(int data)
         {
             Node temp = this.Head;

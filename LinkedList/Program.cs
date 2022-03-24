@@ -18,6 +18,12 @@
             int data = int.Parse(Console.ReadLine());
             linkedList.AppendNode(data);
             linkedList.Display();
+
+            Console.WriteLine("\nEnter a Number to AddStart");
+            int First = int.Parse(Console.ReadLine());
+            linkedList.AddNodeAtStart(First);
+
+            linkedList.Display();
         }
     }
 }
