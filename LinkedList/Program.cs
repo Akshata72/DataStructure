@@ -26,6 +26,9 @@
 
             linkedList.DeleteFirstNode();
             linkedList.Display();
+
+            linkedList.DeleteLastNode();
+            linkedList.Display();
         }
     }
 }

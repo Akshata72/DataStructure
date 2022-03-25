@@ -83,6 +83,23 @@ namespace LinkedList
             this.Head = this.Head.next;
             Console.WriteLine("\nRemove from linkedlist " + temp.data);
         }
+        public void DeleteLastNode()
+        {
+           if(this.Head == null)
+            {
+                Console.WriteLine("List is Empty");
+            }
+            else
+            {
+                Node temp = this.Head;
+                while(temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = null;
+                Console.WriteLine("\nRemove from linkedlist " + temp.next);
+            }
+        }
         public bool search(int data)
         {
             Node temp = this.Head;
